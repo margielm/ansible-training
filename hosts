@@ -1,0 +1,2 @@
+ci  ansible_ssh_host=da3d-gen-sp8-cis001.dalab.syniverse.com  ansible_ssh_user=g800566
+#ci  ansible_ssh_host=10.0.2.15  ansible_ssh_user=vagrant
