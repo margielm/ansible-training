@@ -1,0 +1,17 @@
+1. Introduction to Vagrant
+    * why
+    * how to install
+    * configuration - bootstrap
+    * /vagrant
+
+2. Elements of Ansible
+    * hosts
+    * ansible.cfg
+3. ansible command
+    * run ping module
+        * single server
+        * multiple servers
+     * run setup module
+     * run shell module
+        ansible -m shell -a "echo 'Hello, World!'" home -k
+
