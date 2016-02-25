@@ -10,4 +10,7 @@
       become: yes
 
     - name: copy configuration
-      template: src=templates/portal.properties dest={{path}} backup=yes
+      template: src=templates/{{item}} dest={{path}} backup=yes
+      with_items:
+        - mdm.properties
+        - portal.properties

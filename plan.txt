@@ -42,4 +42,8 @@
             ansible-playbook playbook.yml -k
         * add backup=yes
 
+    * multiple templates
+        * simple solution
+        * with items
+
 
