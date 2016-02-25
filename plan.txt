@@ -20,3 +20,7 @@
     * run playbook with -v(vvv)
     * explain parts of playbook
     * externalize path to variable
+    * override path with command line
+        ansible-playbook playbook.yml -k --extra-vars "path=~/ansible-folder-2"
+
+
