@@ -1,0 +1,5 @@
+---
+- hosts: home
+  tasks:
+    - name: create new folder
+      file: path=~/ansible-folder state=directory

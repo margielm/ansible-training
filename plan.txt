@@ -15,3 +15,8 @@
      * run shell module
         ansible -m shell -a "echo 'Hello, World!'" home -k
 
+4. ansible-playbook
+    * run playbook
+    * run playbook with -v(vvv)
+    * explain parts of playbook
+    * externalize path to variable
