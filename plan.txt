@@ -34,5 +34,12 @@
             "'"'"'"'"'echo BECOME-SUCCESS-xuaspukjjohyqqwluqzjfmofvtzjxuww; LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8 LC_MESSAGES=en_US.UTF-8 /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1456407366.15-123733155942862/file; rm -rf "/home/vagrant/.ansible/tmp/ansible-tmp
             -1456407366.15-123733155942862/" > /dev/null 2>&1'"'"'"'"'"'"'"'"''"'"''
 
+    * template
+        * change the ownership of the folder
+        * move hosts to vars
+        * add template file
+        * provide variables
+            ansible-playbook playbook.yml -k
+        * add backup=yes
 
 

@@ -2,7 +2,12 @@
 - hosts: "{{hosts}}"
   become_method: sudo
   become_user: root
+  vars:
+    - hosts: home
   tasks:
     - name: create new folder
-      file: path={{path}} state=directory
+      file: path={{path}} state=directory owner=vagrant
       become: yes
+
+    - name: copy configuration
+      template: src=templates/portal.properties dest={{path}} backup=yes
