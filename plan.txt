@@ -22,5 +22,7 @@
     * externalize path to variable
     * override path with command line
         ansible-playbook playbook.yml -k --extra-vars "path=~/ansible-folder-2"
-
+    * externalize variable to host_vars
+    * externalize host variable and run on 2 environments (file vs folder)
+        ansible-playbook playbook.yml -k -e "hosts=ci:home"
 
