@@ -46,4 +46,8 @@
         * simple solution
         * with items
 
+    * tags
+    * roles
+    * tasks
+
 
