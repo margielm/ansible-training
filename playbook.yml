@@ -1,5 +1,7 @@
 ---
 - hosts: home
+  vars:
+    - path: ~/ansible-folder
   tasks:
     - name: create new folder
-      file: path=~/ansible-folder state=directory
+      file: path={{path}} state=directory
