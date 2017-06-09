@@ -1,19 +1,20 @@
 ---
-- hosts: "{{hosts}}"
-  become_method: sudo
-  become_user: root
+- hosts: "localhost"
   vars:
-    - hosts: home
+    user: abc
+    password: password1
+
   tasks:
     - name: create new folder
-      file: path={{path}} state=directory owner=vagrant
+      file: path=/target_folder state=directory owner=vagrant
       become: yes
 
     - name: copy configuration
       template:
-        src: templates/{{item}}
-        dest: "{{path}}"
+        src: "{{item}}"
+        dest: "/target_folder"
         backup: yes
       with_items:
         - mdm.properties
         - portal.properties
+

@@ -1,0 +1,16 @@
+---
+- hosts: "localhost"
+  vars:
+    user: abc
+    password: password1
+
+
+  tasks:
+    - name: create new folder
+      file: path=/target_folder state=directory owner=vagrant
+
+    - name: copy configuration
+      template:
+        src: templates/mdm.properties
+        dest: "/target_folder"
+        backup: yes
