@@ -1,10 +1,10 @@
 ---
-- name: create new folder
-  file: path=/configuration state=directory owner=vagrant
-  become: yes
-
-- name: copy configuration
-  template:
-    src: "{{file}}"
-    dest: "/configuration"
-    backup: yes
+- name: create directory
+  file:
+    path: /configuration
+    state: directory
+- name: Copy configuration
+  template: src={{item}} dest=/configuration/ backup=yes
+  with_items:
+    - mdm.properties
+    - portal.properties
