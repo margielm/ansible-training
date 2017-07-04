@@ -2,13 +2,16 @@
 # Create a folder and copy a file to it from templates/mdm.properties
 # replacing placeholders with environment-specific values
 - hosts: home
+  become: yes
   tasks:
     - name: create directory
       file:
-        path: /configration
+        path: /configuration
         state: directory
     - name: Copy configuration
-      template:
-        src: mdm.properties
-        dest: /configuration/
+      template: src={{item}} dest=/configuration/ backup=yes
+      with_items:
+        - mdm.properties
+        - portal.properties
+
 

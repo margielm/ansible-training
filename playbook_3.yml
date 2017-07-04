@@ -1,0 +1,13 @@
+---
+# Use a role to encapsulate repeatable operation
+- hosts: home
+  become: yes
+  tasks:
+    - name: copy configuration
+      include_role:
+        name: config
+      vars:
+        - file: "{{item}}"
+      with_items:
+        - mdm.properties
+        - portal.properties

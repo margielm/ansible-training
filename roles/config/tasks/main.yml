@@ -1,10 +1,10 @@
 ---
 - name: create new folder
-  file: path=/target_folder state=directory owner=vagrant
+  file: path=/configuration state=directory owner=vagrant
   become: yes
 
 - name: copy configuration
   template:
     src: "{{file}}"
-    dest: "/target_folder"
+    dest: "/configuration"
     backup: yes
