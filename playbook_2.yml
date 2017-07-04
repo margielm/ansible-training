@@ -1,0 +1,4 @@
+---
+# Create a folder and copy a file to it from templates/mdm.properties
+# replacing placeholders with environment-specific values
+- hosts: home
