@@ -1,8 +1,10 @@
 ---
 - hosts: localhost
+  vars:
+    name: World
   tasks:
     - name: Print hello  world
-      command: echo "Hello, World"
+      command: echo "Hello, {{name}}"
       register: result
 
     - name: display the message
