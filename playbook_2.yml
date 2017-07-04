@@ -2,3 +2,13 @@
 # Create a folder and copy a file to it from templates/mdm.properties
 # replacing placeholders with environment-specific values
 - hosts: home
+  tasks:
+    - name: create directory
+      file:
+        path: /configration
+        state: directory
+    - name: Copy configuration
+      template:
+        src: mdm.properties
+        dest: /configuration/
+
