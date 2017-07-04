@@ -1,3 +1,3 @@
 [servers]
-ci      ansible_ssh_host=da3d-gen-sp8-cis001.dalab.syniverse.com    ansible_ssh_user=vagrant
-home    ansible_ssh_host=localhost                                  ansible_ssh_user=vagrant
+ci      ansible_host=da3d-gen-sp8-cis001.dalab.syniverse.com    ansible_user=vagrant
+home    ansible_host=localhost                                  ansible_user=vagrant

@@ -1,17 +1,3 @@
 ---
-- hosts: localhost
-  vars:
-    - message: "Good Morning!"
+- hosts:
   tasks:
-    - block:
-      - name: Hello, World!
-        command: echo "{{item}}"
-        register: result
-
-
-      - name: print result
-        debug: msg={{result.stdout}}
-      with_items:
-        - Good Morning
-        - Good Afternoon
-        - Good Evening
