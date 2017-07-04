@@ -45,6 +45,7 @@ Now you should be able to login to ubuntu VM and execute ansible
          ```
 
 1. ansible-playbook
+    * print hello world in playbook
     * run playbook.yml
         ```bash
           ansible-playbook playbook_1.yml
