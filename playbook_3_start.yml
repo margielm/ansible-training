@@ -1,9 +1,0 @@
----
-- hosts: "localhost"
-  vars:
-    user: abc
-    password: password1
-
-  roles:
-    - config
-
