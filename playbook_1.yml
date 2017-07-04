@@ -1,7 +1,5 @@
 ---
-- hosts: localhost
-  vars:
-    name: World
+- hosts: home,ci
   tasks:
     - name: Print hello  world
       command: echo "Hello, {{name}}"
