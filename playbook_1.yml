@@ -1,0 +1,12 @@
+---
+- hosts: "{{hosts | default('localhost')}}"
+
+
+  tasks:
+    - name: Record  hello world
+      shell: "echo '{{message}} {{name | default('World') }}'"
+      register: result
+
+    - name: Print recorded message
+      debug:
+        msg: "{{result.stdout}}"

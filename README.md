@@ -19,10 +19,12 @@ Now you should be able to login to ubuntu VM and execute ansible
     * why do we need it
     * Why do we have ansible pre-installed
     * /vagrant
+    * ansible and windows 10
 
 1. Elements of Ansible
     * hosts
     * ansible.cfg
+    
 1. ansible command
     * run ping module
         * single server

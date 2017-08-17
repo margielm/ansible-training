@@ -1,5 +1,42 @@
 ---
 # Create a folder and copy a file to it from templates/mdm.properties
 # replacing placeholders with environment-specific values
-- hosts: home
+- hosts: localhost
+  vars:
+    - user: g800566
+    - group: "{{user}}"
+    - configuration_folder: /configuration
+#  vars_prompt:
+#    - name: user
+#      prompt: user that will own the directory
+#      default: g800566
+#      private: true
   tasks:
+    - name: create target directory
+      file:
+        path: "{{configuration_folder}}"
+        state: directory
+        owner: "{{user}}"
+        group: "{{group}}"
+        mode: "o=rwx"
+      become: yes
+      - name: create target directory
+            command: sudo mkdir {{configuration_folder}}
+              path: "{{configuration_folder}}"
+              state: directory
+              owner: "{{user}}"
+              group: "{{group}}"
+              mode: "o=rwx"
+            become: yes
+
+    - name: copy configuration
+      template:
+        src: "{{item}}"
+        dest: "{{configuration_folder}}"
+        backup: yes
+      with_items:
+        - portal.properties
+        - mdm.properties
+      tags:
+        - config
+

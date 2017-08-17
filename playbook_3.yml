@@ -1,4 +1,19 @@
 ---
 - hosts: "localhost"
-  roles:
-    - config
+  vars:
+
+  tasks:
+    - name: say hello
+      debug: msg="hello"
+
+    - include_role:
+        name: config
+      vars:
+        user: g800566
+        group: "{{user}}"
+        file: "{{item}}"
+      with_items:
+        - {path: portal.properties, name: "portal configuration file"}
+
+    - name: say bye
+      debug: msg="bye"
